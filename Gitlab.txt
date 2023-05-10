@@ -1,0 +1,176 @@
+  354  git clone https://github.com/shivshankar7977/cloud_lab.git
+  355  ls
+  356  cd cloud_lab/
+  357  ls
+  358  git status
+  359  touch demo{1..2}
+  360  ls
+  361  git add demo1 demo2
+  362  git commit -m "1.0 version"
+  363  git push -u origin master
+  364  git branch
+  365  git branch sub
+  366  git branch
+  367  git checkout sub
+  368  git branch
+  369  git branch Lab1
+  370  git branch Lab2
+  371  git branch Lab3
+  372  git checkout Lab1
+  373  git branch 
+  374  touch script1.sh script2.sh
+  375  ls
+  376  git checkout Lab2
+  377  touch program1.py program2.py
+  378  ls
+  379  git checkout Lab3
+  380  ls
+  381  touch file1.txt file2.txt
+  382  ls
+  383  git checkout sub
+  384  ls
+  385  git checkout master
+  386  ls
+  387  git branch
+  388  git checkout sub
+  389  git add -A
+  390  git commit -m "practice"
+  391  git push -u origin sub
+  392  clear
+  393  cd
+  394  clear
+  395  git clone https://github.com/AkshayG05/Cloud_aws.git
+  396  ls
+  397  cd cloud_aws
+  398  cd Cloud_aws
+  399  ls
+  400  git branch sub
+  401  ls
+  402  git checkout sub
+  403  git branch lab1
+  404  git branch lab2
+  405  git branch lab3
+  406  git checkout lab1
+  407  touch script1.sh
+  408  touch script2.sh
+  409  git checkout lab2
+  410  touch program1.py
+  411  touch program2.py
+  412  git checkout lab3
+  413  touch file1.txt
+  414  touch file2.txt
+  415  ls
+  416  checkout master
+  417  git checkout master
+  418  ls
+  419  git checkout sub
+  420  ls
+  421  clear
+  422  cd
+  423  clear
+  424  git clone https://github.com/AkshayG05/aws.git
+  425  git branch sub
+  426  ls
+  427  cd aws
+  428  git branch sub
+  429  ls
+  430  git checkout sub
+  431  git branch lab1
+  432  git branch lab2
+  433  git branch lab3
+  434  git checkout lab1
+  435  touch script1.sh
+  436  touch script2.sh
+  437  git commit -m "First commit"
+  438  git add -A
+  439  git commit -m "First commit"
+  440  git push -u origin lab1
+  441  git checkout lab2
+  442* 
+  443  touch program2.py
+  444  git add -A
+  445  git commit -m "First commit"
+  446  git push -u origin lab2
+  447  git checkout lab3
+  448  touch file1.txt
+  449  touch file2.txt
+  450  git add -A
+  451  git commit -m "First commit"
+  452  git push -u origin lab3
+  453  ls
+  454  cd
+  455  git clone https://github.com/shivshankar7977/Cloud_practice.git
+  456  ls
+  457  cd Cloud_
+  458  cd Cloud_practice/
+  459  ls
+  460  git branch 
+  461  git branch sub
+  462  ls
+  463  git checkout sub
+  464  git branch lab1
+  465  git branch lab2
+  466  git branch lab3
+  467  git checkout lab1
+  468  ls
+  469  touch script1.sh 
+  470  touch script2.sh 
+  471  git add -A
+  472  git commit -m "First Commit"
+  473  git push -u origin lab1
+  474  ls
+  475  git checkout lab2
+  476  ls
+  477  touch program1.py
+  478  touch program2.py
+  479  ls
+  480  git add -A
+  481  git commit -m "second commit"
+  482  git push -u origin lab2
+  483  ls
+  484  git checkout lab3
+  485  ls
+  486  touch file1.txt
+  487  touch file2.txt
+  488  git add -A
+  489  git commit -m "Third Commit"
+  490  git push -u origin lab3
+  491  ls
+  492  git checkout sub
+  493  ls
+  494  git checkout lab1
+  495  ls
+  496  git branch
+  497  git checkout sub
+  498  ls
+  499  git merge lab1
+  500  git merge lab2
+  501  git merge lab3
+  502  ls
+  503  git add -A
+  504  git commit -m "All files"
+  505  git push -u origin sub
+  506  ls
+  507  cd
+  508  clear
+  509  cd aws
+  510  ls
+  511  git branch sub
+  512  ls
+  513  git checkout sub
+  514  ls
+  515  git merge lab1
+  516  git merge lab2
+  517  git merge lab3
+  518  git add -A
+  519  git commit -m "All files"
+  520  git push -u origin sub
+  521  ls
+  522  history
+  523  cd
+  524  cd Cloud_practice/
+  525  ls
+  526  history 
+  527  history 173
+  528  history 175
+  529  history 176 > Gitlab.txt
