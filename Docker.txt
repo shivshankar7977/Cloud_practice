@@ -1,0 +1,60 @@
+Open VMware Workstation and click on "Create a New Virtual Machine".
+Select "Typical" configuration and click "Next".
+Choose the installation media for your operating system and click "Next".
+Enter a name for your virtual machine and choose a location to save it.
+In the "Processor Configuration" screen, select the number of processors and cores that you want to allocate to the virtual machine.
+In the "Memory" screen, set the memory size to 4 or 8 GB.
+In the "Network Type" screen, choose the network type that you want to use for the virtual machine.
+In the "Select a Disk" screen, choose "Create a new virtual disk" and set the disk size to 70 GB.
+Complete the remaining steps to finish creating the virtual machine.
+
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+
+docker version
+Create a Dockerfile for Python/Java, for example:
+FROM python:3.9
+LABEL maintainer="Your Name <your_email@example.com>"
+COPY . /app
+WORKDIR /app
+CMD ["python", "app.py"]
+OR
+FROM openjdk:8
+LABEL maintainer="Your Name <your_email@example.com>"
+COPY . /app
+WORKDIR /app
+CMD ["java", "App"]
+Create a small program to show your PRN number in Python/Java, for example:
+print("PRN number: 123456789")
+
+
+for java
+public class App {
+    public static void main(String[] args) {
+        System.out.println("PRN number: 123456789");
+    }
+}
+
+Build the Docker image by running the command:
+docker build -t my-python-app .
+
+OR 
+docker build -t my-java-app .
+Run the Docker container by running the command:
+docker run my-python-app
+or
+docker run my-python-app
+
+Log in to Docker Hub by running the command:
+docker login
+docker tag my-python-app yourusername/my-python-app
+or
+docker tag my-java-app yourusername/my-java-app
+Push the Docker image to Docker Hub by running the command:
+docker push yourusername/my-python-app
+or
+docker push yourusername/my-java-app
+To list all the Docker images and containers created in questions 2.b and 2.c:
+docker images
+docker ps -a
+
