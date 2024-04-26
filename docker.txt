@@ -1,0 +1,65 @@
+# How to run webpage inside container using docker images
+# step 1: create application
+    -> vim index.html
+        -> This page is hosted from container 
+# step 2: create Dockerfile
+    -> FROM nginx
+    -> COPY ./index.html /usr/share/nginx/html/
+# step 3: build Dockerfile
+    -> docker build -t myapp:v1 ./
+# step 4: create docker container
+    -> docker run --name app1 -d myapp:v1
+# step 5: docker inspect to find ip address
+    -> docker inspect myapp:v1
+# step 6: paste ip address in brower to check 	web application is running or not
+
+# How to run python application inside container using docker images
+# step 1: create application
+    -> vim pyapp.py
+        -> num1=int(input("Enter first Number: ")) 
+        -> num2=int(input("Enter second Number: ")) 
+        -> print("Sum: ",num1+num2)
+# step 2: create Dockerfile
+    -> FROM python:3
+    -> COPY ./pyapp.py /myapp/
+    -> CMD ["python3","/myapp/pyapp.py"]
+# step 3: build Dockerfile
+    -> docker build -t pyapp:v1 ./
+# step 4: create docker container
+    -> docker run --name pyapp1 -ti pyapp:v1
+
+
+# How to create docker container
+-> docker run [OPTIONS] image_name:tag
+
+OPTIONS:
+--name [container_name]  -> this option is used to give name for the given container
+-p [local_port:container_port] -> this option is used to map the local machine port to the port inside the container
+-v [local_volume:container_vol] -> this option is used to map the local machine directory to the directory inside the container
+-d -> this option is used to run container in detached mode
+--rm -> this option will delete the docker if the docker is stopped
+-ti -> this option is used to run the container in interactive shell mode
+
+# How to Start a stopped container
+-> docker start [container_id/container_name]
+
+# How to stop a running container
+-> docker stop [container_id/container_name]
+
+# How to delete a container
+-> docker rm [container_id/container_name]
+
+# How to inspect a container
+-> docker inspect [container_id/container_name]
+
+# How to check all the docker images present in local repository
+-> docker images
+
+# How to check all the running container
+-> docker ps
+
+# How to check all the container
+-> docker ps -a
+
+
+
