@@ -1,0 +1,72 @@
+# step 1: create instances(ubuntu)
+# step 2: after creating login into the instance
+    -> sudo su
+    -> apt update -y
+    -> apt install apache2
+    -> systemctl start apache2
+    -> cd /var/www/html
+    -> echo "This webpage is being hosted from Load Balancers machine1" > index.html
+# step 3: create another instance(ubuntu)
+# step 4: after creating login into the instance
+    -> sudo su
+    -> apt update -y
+    -> apt install apache2
+    -> systemctl start apache2
+    -> cd /var/www/html
+    -> echo "This webpage is being hosted from Load Balancers machine2" > index.html
+
+# step 5: Create Target group for machine1 
+    -> target group : instance
+    -> Target group name : LB-tg1
+    -> select protocol : HTTP, Port : 80
+    -> VPC : choose the required VPC
+    -> select protocol version : HTTP1
+    -> Health check protocol : path
+ 
+ ________________________________________
+| 13th May, 2023                        |
+|_______________________________________|
+
+# step 1 : create machine1
+    -> define name
+    -> choose amazon Linux machine
+    -> choose key pair to login
+    -> choose Default VPC
+    -> choose no preference(so that any default subnet can be selected)
+    -> choose enable on auto assign public ip
+    -> choose security group 
+    -> launch instance
+        -> connect to instance
+            -> sudo su -
+            -> yum update -y
+            -> yum install httpd
+            -> cd /var/www/html/
+            -> echo " this webpage is being hosted from machine1" > index.html 
+# step 2 : create machine2
+    -> define name
+    -> choose amazon Linux machine
+    -> choose key pair to login
+    -> choose Default VPC
+    -> choose no preference(so that any default subnet can be selected)
+    -> choose enable on auto assign public ip
+    -> choose security group 
+    -> launch instance
+        -> connect to instance
+            -> sudo su -
+            -> yum update -y
+            -> yum install httpd
+            -> cd /var/www/html/
+            -> echo " this webpage is being hosted from machine1" > index.html 
+
+# step 3 : create target group1
+    -> click on create target group 
+    -> target type: instance
+    -> target group name : Machine1-tg
+    -> protocol : 80
+    -> VPC : default
+    -> Protocol version : HTTP1
+    -> create target group
+        -> choose instance which you want to connect
+
+# step 4 : create target group2
+    -> 
