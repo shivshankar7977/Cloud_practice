@@ -1,0 +1,56 @@
+what we need to work with lambda function
+step 1: create IAM Roles
+step 2: create S3 bucket
+step 3: define SNS settings
+Step 4: create Lambda function
+step 5: add trigger to lambda function
+step 6: add destination to lambda function
+
+# How to create IAM Roles
+
+-> Go to Search, type IAM 
+-> Go to Roles, in IAM service
+-> click on Create Role, 
+    -> choose AWS Service under, Trusted Type entity
+    -> Choose Lambda under, Use case
+    -> click on next
+-> search for the exec
+    -> Choose AWSLambdaBasicExecutionRole service, click next
+    -> define the Role name, click create Role
+-> search for the sns
+    -> choose AmazonSNSFullAccess service, click next
+    -> define the Role name, click create Role
+
+# How to create S3 bucket
+
+-> go to Search, type S3, choose buckets feature
+-> click on create bucket button, 
+    -> define name for the bucket under general configuration.
+    -> define AWS Region
+    -> select ACL disabled, under Object ownership
+    -> uncheck the block all public acces option, under block Block Public Access settings for this bucket
+    -> check the warning the warning
+    -> choose disable the bucket versioning
+    -> click on create bucket button
+
+# How to define SNS settings
+-> choose topics in SNS service
+-> click on create topic
+-> choose standard in Type of topic
+-> define name of the topic
+-> create topic
+    -> choose create subscription in next page
+    -> choose EMAIL in protocol
+    -> define Endpoint: "Enter your email id, where you want to receive logs" 
+    -> click create subscription
+    -> verify the mail id, by login into your mail account, check the status of the subscription, if it's confirmed
+
+# How to create the lambda function 
+-> search for the lambda function, click on lambda function
+-> choose Author from scratch.
+-> fill out the basic information
+
+
+
+
+
