@@ -1,0 +1,10 @@
+# How to create Default VPC in AWS
+
+-> create VPC with CIDR 10.0.0.0/16
+-> create public subnet and CIDR 10.0.0.0/24
+-> create internet gateway and attach with Default VPC
+-> create Route Table
+-> internet gateway need to be attached with VPC
+-> Add internet gateway in the route table and subnet association
+
+# now you can create and check if internet is working or not, don't forget to set, automatic ip assign to enable
